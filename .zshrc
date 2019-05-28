@@ -2,15 +2,47 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/quangtran/.oh-my-zsh"
+export ZSH="/Users/$(whoami)/.oh-my-zsh"
+
+DEFAULT_USER=$(whoami)
+
+# iTerm2 color scheme
+TERM=xterm-256color
+
+# Load zsh tools installed via Homebrew
+HOMEBREW=/usr/local/share
+
+source "$HOMEBREW/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+
+source "$HOMEBREW/zsh-autosuggestions/zsh-autosuggestions.zsh"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rbenv vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
+# See https://github.com/bhilburn/powerlevel9k
+# ZSH_THEME="powerlevel9k/powerlevel9k"
+
+# Load Nerd Fonts with Powerlevel9k theme
+POWERLEVEL9K_MODE="nerdfont-complete"
+source "/usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme"
+
+# Customize prompts
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
+  dir
+  rbenv
+  vcs
+)
+
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
+  status
+  root_indicator
+  history
+  ip
+  time
+)
+
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -65,15 +97,7 @@ DISABLE_UPDATE_PROMPT=true
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  git
-  vi-mode
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-  zsh-256color
-)
-
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'
+plugins=(git vi-mode)
 
 # User configuration
 
@@ -82,14 +106,16 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Flutter
-export PATH=$HOME/bin:$HOME/Development/flutter/bin:$PATH
+# Yarn
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # VS Code & Sublime Text
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Applications/Sublime Text.app/Contents/SharedSupport/bin"
 
-# Yarn
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+# Flutter
+export PATH=$HOME/bin:$HOME/Development/flutter/bin:$PATH
+
+source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -132,5 +158,3 @@ alias gsb="gatsby"
 
 # zsh-bd
 . $HOME/.zsh/plugins/bd/bd.zsh
-
-source $ZSH/oh-my-zsh.sh
