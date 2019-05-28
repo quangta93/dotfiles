@@ -10,11 +10,11 @@
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "editor.cursorStyle": "block",
   "editor.rulers": [
-      80,
-      100
+    80,
+    100
   ],
   "workbench.colorCustomizations": {
-      "editorCursor.foreground": "#b0babe"
+    "editorCursor.foreground": "#b0babe"
   },
   "editor.tabSize": 2,
   "editor.tabCompletion": "on",
@@ -25,9 +25,32 @@
   "vim.cursorStylePerMode.insert": "line",
   "emmet.triggerExpansionOnTab": true,
   "emmet.includeLanguages": {
-      "javascript": "javascriptreact",
+    "javascript": "javascriptreact",
   },
   "editor.colorDecorators": false,
   "dart.closingLabels": false,
-  "editor.wordWrap": "on"
+  "editor.wordWrap": "on",
+  "files.insertFinalNewline": true,
+  "todohighlight.keywords": [
+    {
+      "text": "HACK:",
+      "color": "#fff",
+      "backgroundColor": "#ff3d00"
+    },
+    {
+      "text": "NOTE:",
+      "color": "#fff",
+      "backgroundColor": "#757575"
+    },
+    {
+      "text": "FIXME:",
+      "color": "#fff",
+      "backgroundColor": "#d50000"
+    },
+    {
+      "text": "TODO:",
+      "color": "#fff",
+      "backgroundColor": "#ffab00"
+    }
+  ],
 }
