@@ -75,8 +75,6 @@ plugins=(
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'
 
-source $ZSH/oh-my-zsh.sh
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -134,3 +132,5 @@ alias gsb="gatsby"
 
 # zsh-bd
 . $HOME/.zsh/plugins/bd/bd.zsh
+
+source $ZSH/oh-my-zsh.sh
