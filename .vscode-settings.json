@@ -55,4 +55,9 @@
       "backgroundColor": "#ffab00"
     }
   ],
+  "git.confirmSync": false,
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[markdown]": {}
 }

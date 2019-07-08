@@ -155,6 +155,8 @@ alias gcm='git commit -m'
 alias gs='git submodule'
 
 alias gsb="gatsby"
+alias bs="browser-sync"
+alias bss="browser-sync start"
 
 # zsh-bd
 . $HOME/.zsh/plugins/bd/bd.zsh
