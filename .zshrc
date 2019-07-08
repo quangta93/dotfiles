@@ -157,6 +157,7 @@ alias gs='git submodule'
 alias gsb="gatsby"
 alias bs="browser-sync"
 alias bss="browser-sync start"
+alias ot="octave"
 
 # zsh-bd
 . $HOME/.zsh/plugins/bd/bd.zsh
