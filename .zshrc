@@ -13,7 +13,6 @@ TERM=xterm-256color
 HOMEBREW=/usr/local/share
 
 source "$HOMEBREW/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-
 source "$HOMEBREW/zsh-autosuggestions/zsh-autosuggestions.zsh"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'
 
@@ -42,7 +41,6 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
   ip
   time
 )
-
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -101,6 +99,9 @@ plugins=(git vi-mode)
 
 # User configuration
 
+# exa Colors
+EXA_COLORS="ur=37:uw=37:ux=37:ue=37:gr=37:gw=37:gx=37:tr=37:tw=37:tx=37:su=37:sf=37:xa=37:da=37"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -151,8 +152,8 @@ alias gco="git checkout"
 alias gcb="git checkout -b"
 alias gb="git branch"
 alias ga="git add"
-alias gcm='git commit -m'
-alias gs='git submodule'
+alias gcm="git commit -m"
+alias gs="git stash"
 
 alias gsb="gatsby"
 alias bs="browser-sync"
@@ -160,6 +161,8 @@ alias bss="browser-sync start"
 
 alias ot="octave"
 alias ys="yarn start"
+
+alias l="exa -almgh --sort=type --git"
 
 # zsh-bd
 . $HOME/.zsh/plugins/bd/bd.zsh

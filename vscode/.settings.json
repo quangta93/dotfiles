@@ -69,5 +69,7 @@
     "editorCursor.foreground": "#b0babe"
   },
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Material Theme High Contrast"
+  "workbench.colorTheme": "Material Theme High Contrast",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }
