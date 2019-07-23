@@ -156,10 +156,6 @@ alias gcm="git commit -m"
 alias gs="git stash"
 
 alias gsb="gatsby"
-alias bs="browser-sync"
-alias bss="browser-sync start"
-
-alias ot="octave"
 alias ys="yarn start"
 
 alias l="exa -almgh --sort=type --git"
