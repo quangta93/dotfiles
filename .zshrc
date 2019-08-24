@@ -159,6 +159,7 @@ alias gsb="gatsby"
 alias ys="yarn start"
 
 alias l="exa -almgh --sort=type --git"
+alias nf="neofetch -s"
 
 # zsh-bd
 . $HOME/.zsh/plugins/bd/bd.zsh

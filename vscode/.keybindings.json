@@ -118,5 +118,14 @@
     "key": "ctrl+j",
     "command": "-editor.action.joinLines",
     "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+cmd+l",
+    "command": "-editor.action.selectHighlights",
+    "when": "editorFocus"
+  },
+  {
+    "key": "shift+cmd+l",
+    "command": "turboConsoleLog.displayLogMessage",
   }
 ]

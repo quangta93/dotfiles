@@ -31,13 +31,6 @@
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
   "git.enabled": false,
-  "path-intellisense.mappings": {
-    "components": "${workspaceRoot}/src/components",
-    "core": "${workspaceRoot}/src/core",
-    "helpers": "${workspaceRoot}/src/helpers",
-    "static": "${workspaceRoot}/src/static",
-    "stylesheets": "${workspaceRoot}/src/stylesheets"
-  },
   "todohighlight.keywords": [
     {
       "text": "HACK:",
@@ -71,5 +64,10 @@
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "Material Theme High Contrast",
   "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+  "npm-intellisense.scanDevDependencies": true,
+  "scss.showErrors": true,
+  "editor.suggest.maxVisibleSuggestions": 5,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
