@@ -21,7 +21,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # See https://github.com/bhilburn/powerlevel9k
-# ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Load Nerd Fonts with Powerlevel9k theme
 POWERLEVEL9K_MODE="nerdfont-complete"
@@ -97,7 +97,9 @@ DISABLE_UPDATE_PROMPT=true
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git vi-mode)
 
-# User configuration
+##############################
+## User Configurations
+##############################
 
 # exa Colors
 EXA_COLORS="ur=37:uw=37:ux=37:ue=37:gr=37:gw=37:gx=37:tr=37:tw=37:tx=37:su=37:sf=37:xa=37:da=37"
@@ -107,14 +109,13 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Yarn
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+##############################
+## PATH
+##############################
+VSCODE_PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+SUBLIME_PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin"
 
-# VS Code & Sublime Text
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Applications/Sublime Text.app/Contents/SharedSupport/bin"
-
-# Flutter
-export PATH=$HOME/bin:$HOME/Development/flutter/bin:$PATH
+export PATH=$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$VSCODE_PATH:$SUBLIME_PATH:$HOME/Development/flutter/bin:$HOME/bin:$PATH
 
 source $ZSH/oh-my-zsh.sh
 

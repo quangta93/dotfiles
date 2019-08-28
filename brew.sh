@@ -6,16 +6,18 @@
 sudo xcodebuild -license
 
 ##############################
-##############################
-##############################
 ## Homebrew
+##############################
 echo 'Installing homebrew package manager'
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 
 ##############################
+## oh-my-zsh
 ##############################
-##############################
+echo 'Installing oh-my-zsh shell'
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 echo 'Loading packages for oh-my-zsh'
 brew tap sambadevi/powerlevel9k # powerlevel9k theme
 brew install powerlevel9k
@@ -31,23 +33,15 @@ curl https://raw.githubusercontent.com/Tarrasch/zsh-bd/master/bd.zsh > $HOME/.zs
 
 
 ##############################
-##############################
-##############################
-echo 'Installing oh-my-zsh shell'
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-
-##############################
-##############################
-##############################
 ## Git configuration
+##############################
+echo 'Setting up git'
 ## TODO: setup git including generating SSH keys & global git config
 
 
 ##############################
-##############################
-##############################
 ## Personal dotfiles
+##############################
 echo 'Downloading personal dotfiles'
 mkdir $HOME/Development
 # TODO: test clone
@@ -55,9 +49,8 @@ git clone https://github.com/quangta93/dotfiles.git $HOME/Development/dotfiles
 
 
 ##############################
-##############################
-##############################
 ## Shell configuration
+##############################
 echo 'Loading zsh and vim configurations'
 rm $HOME/.zshrc
 rm $HOME/.vimrc
@@ -66,10 +59,11 @@ ln -s $HOME/Development/dotfiles/.vimrc $HOME/.vimrc
 
 
 ##############################
-##############################
-##############################
 ## Applications
+##############################
 brew tap caskroom/cask ## Tap homebrew cask to download applications
+
+brew install exa
 
 ## iTerm2
 echo 'Installing iTerm2'
@@ -87,13 +81,17 @@ brew cask install visual-studio-code
 echo 'Loading VS Code settings'
 
 
+##############################
+## nvm & node
+##############################
+# TODO:
+
 brew cleanup
 
 
 ##############################
-##############################
-##############################
 ## System Info
+##############################
 brew install neofetch
 
 neofetch
