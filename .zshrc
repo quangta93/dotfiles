@@ -112,10 +112,10 @@ export NVM_DIR="$HOME/.nvm"
 ##############################
 ## PATH
 ##############################
-VSCODE_PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-SUBLIME_PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin"
+VSCODE="/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+SUBLIME="/Applications/Sublime Text.app/Contents/SharedSupport/bin"
 
-export PATH=$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$VSCODE_PATH:$SUBLIME_PATH:$HOME/Development/flutter/bin:$HOME/bin:$PATH
+export PATH=$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$VSCODE:$SUBLIME:$HOME/Development/flutter/bin:$HOME/bin:$PATH
 
 source $ZSH/oh-my-zsh.sh
 

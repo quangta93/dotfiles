@@ -46,6 +46,7 @@ echo 'Downloading personal dotfiles'
 mkdir $HOME/Development
 # TODO: test clone
 git clone https://github.com/quangta93/dotfiles.git $HOME/Development/dotfiles
+export DOTFILES=$HOME/Development/dotfiles
 
 
 ##############################
@@ -54,8 +55,8 @@ git clone https://github.com/quangta93/dotfiles.git $HOME/Development/dotfiles
 echo 'Loading zsh and vim configurations'
 rm $HOME/.zshrc
 rm $HOME/.vimrc
-ln -s $HOME/Development/dotfiles/.zshrc $HOME/.zshrc
-ln -s $HOME/Development/dotfiles/.vimrc $HOME/.vimrc
+ln -s $DOTFILES/.zshrc $HOME/.zshrc
+ln -s $DOTFILES/.vimrc $HOME/.vimrc
 
 
 ##############################
@@ -75,6 +76,11 @@ echo 'Installing Visual Studio Code and its extensions'
 brew search visual-studio-code
 brew cask info visual-studio-code
 brew cask install visual-studio-code
+
+export VSCODE_USER="$HOME/Library/Application Support/Code/User"
+rm -f $VSCODE_USER/keybindings.json $VSCODE_USER/settings.json
+ln $DOTFILES/vscode/keybindings.json $VSCODE_USER/keybindings.json
+ln $DOTFILES/vscode/settings.json $VSCODE_USER/settings.json
 
 ## TODO: VS Code Extensions
 
