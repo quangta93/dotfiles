@@ -9,7 +9,7 @@ echo 'Installing homebrew package manager'
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 echo 'Loading packages for oh-my-zsh'
-# powerlevel9k
+## powerlevel9k theme
 brew tap sambadevi/powerlevel9k
 brew install powerlevel9k
 
@@ -25,7 +25,9 @@ curl https://raw.githubusercontent.com/Tarrasch/zsh-bd/master/bd.zsh > $HOME/.zs
 echo 'Installing oh-my-zsh shell'
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-# Personal dotfiles
+## TODO: setup git including generating SSH keys & global git config
+
+## Personal dotfiles
 echo 'Downloading personal dotfiles'
 mkdir $HOME/Development
 # TODO: test clone
