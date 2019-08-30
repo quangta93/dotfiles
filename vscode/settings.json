@@ -20,7 +20,7 @@
   "editor.acceptSuggestionOnEnter": "on",
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.wordWrapColumn": 100,
-  "editor.fontSize": 14,
+  "editor.fontSize": 13,
   "editor.cursorBlinking": "solid",
   "editor.colorDecorators": false,
   "editor.wordWrap": "on",
@@ -55,7 +55,6 @@
   ],
   "vim.cursorStylePerMode.normal": "block",
   "vim.cursorStylePerMode.insert": "line",
-  "window.zoomLevel": 0,
   "workbench.startupEditor": "newUntitledFile",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.colorCustomizations": {

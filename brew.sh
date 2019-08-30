@@ -65,6 +65,11 @@ ln -s $DOTFILES/.vimrc $HOME/.vimrc
 brew tap caskroom/cask ## Tap homebrew cask to download applications
 
 brew install exa
+brew cask install spectacle
+brew cask install google-chrome
+brew cask install alfred
+brew cask install caffeine
+brew cask install sourcetree
 
 ## iTerm2
 echo 'Installing iTerm2'
@@ -73,18 +78,16 @@ brew cask install iterm2
 
 ## VS Code
 echo 'Installing Visual Studio Code and its extensions'
-brew search visual-studio-code
-brew cask info visual-studio-code
 brew cask install visual-studio-code
 
+echo 'Loading VS Code settings'
 export VSCODE_USER="$HOME/Library/Application Support/Code/User"
 rm -f $VSCODE_USER/keybindings.json $VSCODE_USER/settings.json
 ln $DOTFILES/vscode/keybindings.json $VSCODE_USER/keybindings.json
 ln $DOTFILES/vscode/settings.json $VSCODE_USER/settings.json
 
 ## TODO: VS Code Extensions
-
-echo 'Loading VS Code settings'
+echo 'Installing VS Code extensions'
 
 
 ##############################
