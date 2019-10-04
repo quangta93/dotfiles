@@ -105,17 +105,15 @@ plugins=(git vi-mode)
 EXA_COLORS="ur=37:uw=37:ux=37:ue=37:gr=37:gw=37:gx=37:tr=37:tw=37:tx=37:su=37:sf=37:xa=37:da=37"
 
 # export MANPATH="/usr/local/man:$MANPATH"
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 ##############################
 ## PATH
 ##############################
 VSCODE="/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 SUBLIME="/Applications/Sublime Text.app/Contents/SharedSupport/bin"
+FLUTTER=$HOME/Development/flutter/bin
 
-export PATH=$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$VSCODE:$SUBLIME:$HOME/Development/flutter/bin:$HOME/bin:$PATH
+export PATH=$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$VSCODE:$SUBLIME:$FLUTTER:$HOME/bin:$PATH
 
 source $ZSH/oh-my-zsh.sh
 
@@ -142,8 +140,8 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias shcf="vim ~/.zshrc"
-alias shre="source ~/.zshrc"
+alias cf="vim ~/.zshrc"
+alias rcf="source ~/.zshrc"
 
 alias gcl="git clone"
 alias gpl="git pull origin"
@@ -162,5 +160,11 @@ alias ys="yarn start"
 alias l="exa -almgh --sort=type --git"
 alias nf="neofetch -s"
 
+alias bss="brew services"
+
 # zsh-bd
 . $HOME/.zsh/plugins/bd/bd.zsh
+
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion

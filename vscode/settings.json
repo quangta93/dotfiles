@@ -20,7 +20,6 @@
   "editor.acceptSuggestionOnEnter": "on",
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.wordWrapColumn": 100,
-  "editor.fontSize": 13,
   "editor.cursorBlinking": "solid",
   "editor.colorDecorators": false,
   "editor.wordWrap": "on",
@@ -68,5 +67,7 @@
   "editor.suggest.maxVisibleSuggestions": 5,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "editor.fontFamily": "SF Mono, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 13
 }

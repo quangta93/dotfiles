@@ -1,6 +1,9 @@
 #!/bin/bash
 ## Inspiration: https://sourabhbajaj.com/mac-setup
 
+# Allow key repetition on MacOS
+defaults write -g ApplePressAndHoldEnabled -bool false
+
 # Before running this script:
 # Install latest Xcode from App Store
 sudo xcodebuild -license
@@ -37,6 +40,17 @@ curl https://raw.githubusercontent.com/Tarrasch/zsh-bd/master/bd.zsh > $HOME/.zs
 ##############################
 echo 'Setting up git'
 ## TODO: setup git including generating SSH keys & global git config
+
+
+##############################
+## nvm & node
+##############################
+brew install nvm
+mkdir ~/.nvm
+nvm --version
+nvm install --lts
+nvm use --lts
+node --version
 
 
 ##############################
@@ -86,14 +100,10 @@ rm -f $VSCODE_USER/keybindings.json $VSCODE_USER/settings.json
 ln $DOTFILES/vscode/keybindings.json $VSCODE_USER/keybindings.json
 ln $DOTFILES/vscode/settings.json $VSCODE_USER/settings.json
 
-## TODO: VS Code Extensions
-echo 'Installing VS Code extensions'
+## Extensions
+mkdir -p $HOME/.vscode
+ln $DOTFILES/vscode/extensions $HOME/.vscode/extensions
 
-
-##############################
-## nvm & node
-##############################
-# TODO:
 
 brew cleanup
 
